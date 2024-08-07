@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b01tvmt38yrca"]
+
+[ext_resource type="FontFile" uid="uid://b5b7ba80pjg4t" path="res://assets/font/Roboto-Regular.ttf" id="1_jyhbk"]
+[ext_resource type="Texture2D" uid="uid://ceptalmwye1bd" path="res://assets/Popup..png" id="1_wvl0m"]
+[ext_resource type="Texture2D" uid="uid://crayv7daqolv" path="res://assets/Smartphone-Sheet.png" id="2_qiy1t"]
+[ext_resource type="Texture2D" uid="uid://cjjan04llfk2v" path="res://assets/btn1.png" id="3_uuowi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l56fi"]
+texture = ExtResource("1_wvl0m")
+expand_margin_left = 100.0
+expand_margin_top = 48.0
+expand_margin_right = 48.0
+expand_margin_bottom = 48.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtpr1"]
+texture = ExtResource("3_uuowi")
+texture_margin_left = 10.0
+texture_margin_top = 2.0
+texture_margin_right = 10.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fyu4q"]
+texture = ExtResource("2_qiy1t")
+texture_margin_top = 8.0
+texture_margin_bottom = 8.0
+
+[resource]
+BigPanelContainer/base_type = &"PanelContainer"
+BigPanelContainer/styles/panel = SubResource("StyleBoxTexture_l56fi")
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_jyhbk")
+Button/styles/normal = SubResource("StyleBoxTexture_xtpr1")
+Label/colors/font_color = Color(0.051971, 0.051971, 0.051971, 1)
+Label/fonts/font = ExtResource("1_jyhbk")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_fyu4q")
