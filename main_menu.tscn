@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cik6vim43x3bl"]
+[gd_scene load_steps=10 format=3 uid="uid://cik6vim43x3bl"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_6ja73"]
 [ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/back.png" id="1_aepxd"]
 [ext_resource type="FontFile" uid="uid://b2p1rfua5fx68" path="res://assets/font/04B_30__.TTF" id="2_uxy71"]
+[ext_resource type="Script" path="res://scripts/animation_component.gd" id="4_55rvp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kvfue"]
 texture = ExtResource("1_aepxd")
@@ -87,6 +88,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fr13u")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kitij")
 text = "Start Game"
 
+[node name="AnimationComponent" type="Node" parent="VBoxContainer/Button"]
+script = ExtResource("4_55rvp")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.5
+transition_type = 10
+
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -100,6 +107,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_kco5u")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fr13u")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kitij")
 text = "Options"
+
+[node name="AnimationComponent2" type="Node" parent="VBoxContainer/Button2"]
+script = ExtResource("4_55rvp")
+hover_scale = Vector2(1.1, 1.1)
+time = 0.2
+transition_type = 10
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2

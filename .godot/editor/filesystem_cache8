@@ -1,9 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722991824
+::res://::1722993147
 icon.svg::CompressedTexture2D::2171796344703292439::1722905006::1722905025::1::::<><>::
-main_menu.tscn::PackedScene::5356916062559257397::1722991553::0::1::::<><>::uid://bnpmx8lif7i1g::::res://assets/back.png
+main_menu.tscn::PackedScene::5356916062559257397::1722992673::0::1::::<><>::res://main_menu.gd<>uid://bnpmx8lif7i1g::::res://assets/back.png<>uid://b2p1rfua5fx68::::res://assets/font/04B_30__.TTF
 our_theme.tres::Theme::4196007381732770072::1722991065::0::1::::<><>::uid://b5b7ba80pjg4t::::res://assets/font/Roboto-Regular.ttf<>uid://ceptalmwye1bd::::res://assets/Popup..png<>uid://crayv7daqolv::::res://assets/Smartphone-Sheet.png<>uid://cjjan04llfk2v::::res://assets/btn1.png
-test.tscn::PackedScene::3150024796435086675::1722991298::0::1::::<><>::uid://bnpmx8lif7i1g::::res://assets/back.png<>uid://57bfy1qnlxxf::::res://icon.svg<>uid://b01tvmt38yrca::::res://our_theme.tres<>uid://od8la3hg04qi::::res://assets/shrooms.png<>uid://dqah6sh2naauy::::res://assets/door.png
+main_menu.gd::GDScript::-1::1722992491::0::1::::<>Control<>::
+test.tscn::PackedScene::3150024796435086675::1722992673::0::1::::<><>::uid://bnpmx8lif7i1g::::res://assets/back.png<>uid://57bfy1qnlxxf::::res://icon.svg<>uid://b01tvmt38yrca::::res://our_theme.tres<>uid://od8la3hg04qi::::res://assets/shrooms.png<>uid://dqah6sh2naauy::::res://assets/door.png
 ::res://assets/::1722991824
 back.png::CompressedTexture2D::3330612745106265130::1722905533::1722905623::1::::<><>::
 btn1.png::CompressedTexture2D::5423144933633575243::1722989365::1722989371::1::::<><>::
