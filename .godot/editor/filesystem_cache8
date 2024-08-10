@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722993147
+::res://::1723246765
+default_bus_layout.tres::AudioBusLayout::158526930273533240::1723246605::0::1::::<><>::
 icon.svg::CompressedTexture2D::2171796344703292439::1722905006::1722905025::1::::<><>::
-main_menu.tscn::PackedScene::5356916062559257397::1722992673::0::1::::<><>::res://main_menu.gd<>uid://bnpmx8lif7i1g::::res://assets/back.png<>uid://b2p1rfua5fx68::::res://assets/font/04B_30__.TTF
+main_menu.gd::GDScript::-1::1723164726::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::5356916062559257397::1723246765::0::1::::<><>::res://main_menu.gd<>uid://bnpmx8lif7i1g::::res://assets/back.png<>uid://b2p1rfua5fx68::::res://assets/font/04B_30__.TTF<>res://scripts/animation_component.gd<>uid://cmiuqqeyqy1ov::::res://assets/audio/music/A. Cooper - Ninth Track.mp3
 our_theme.tres::Theme::4196007381732770072::1722991065::0::1::::<><>::uid://b5b7ba80pjg4t::::res://assets/font/Roboto-Regular.ttf<>uid://ceptalmwye1bd::::res://assets/Popup..png<>uid://crayv7daqolv::::res://assets/Smartphone-Sheet.png<>uid://cjjan04llfk2v::::res://assets/btn1.png
-main_menu.gd::GDScript::-1::1722992491::0::1::::<>Control<>::
-test.tscn::PackedScene::3150024796435086675::1722992673::0::1::::<><>::uid://bnpmx8lif7i1g::::res://assets/back.png<>uid://57bfy1qnlxxf::::res://icon.svg<>uid://b01tvmt38yrca::::res://our_theme.tres<>uid://od8la3hg04qi::::res://assets/shrooms.png<>uid://dqah6sh2naauy::::res://assets/door.png
-::res://assets/::1722991824
+test.tscn::PackedScene::3150024796435086675::1723246764::0::1::::<><>::uid://bnpmx8lif7i1g::::res://assets/back.png<>uid://57bfy1qnlxxf::::res://icon.svg<>uid://b01tvmt38yrca::::res://our_theme.tres<>uid://od8la3hg04qi::::res://assets/shrooms.png<>uid://dqah6sh2naauy::::res://assets/door.png
+::res://assets/::1723165303
 back.png::CompressedTexture2D::3330612745106265130::1722905533::1722905623::1::::<><>::
 btn1.png::CompressedTexture2D::5423144933633575243::1722989365::1722989371::1::::<><>::
 btn2.png::CompressedTexture2D::8995091986891463857::1722989416::1722989512::1::::<><>::
@@ -14,7 +15,15 @@ Popup..png::CompressedTexture2D::5085716628438134381::1722989507::1722989512::1:
 shrooms.png::CompressedTexture2D::990860292270486180::1722905729::1722905729::1::::<><>::
 Smartphone-Sheet.png::CompressedTexture2D::175516120709844515::1722988498::1722988502::1::::<><>::
 UIbg.png::CompressedTexture2D::6695808191607136242::1722987670::1722987738::1::::<><>::
+::res://assets/audio/::1723246973
+::res://assets/audio/music/::1723246524
+A. Cooper - Ninth Track.mp3::AudioStreamMP3::5632866273298501913::1723246485::1723246524::1::::<><>::
+music_zapsplat_easy_cheesy.mp3::AudioStreamMP3::4315432134965974978::1723166282::1723246288::1::::<><>::
+::res://assets/audio/sfx/::1723246976
+uinav.wav::AudioStreamWAV::5292281950230767557::1723246976::1723246986::1::::<><>::
 ::res://assets/font/::1722991824
 04B_30__.TTF::FontFile::4314094422092336675::1722991821::1722991824::1::::<><>::
 Lato-Regular.ttf::FontFile::3075679841792851674::1710254358::1722986621::1::::<><>::
 Roboto-Regular.ttf::FontFile::4496095152285402141::1722545774::1722986621::1::::<><>::
+::res://scripts/::1723246759
+animation_component.gd::GDScript::-1::1723246759::0::1::::AnimationComponent<>Node<>::
