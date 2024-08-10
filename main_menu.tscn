@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cik6vim43x3bl"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_6ja73"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_6ja73"]
 [ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/back.png" id="1_aepxd"]
 [ext_resource type="FontFile" uid="uid://b2p1rfua5fx68" path="res://assets/font/04B_30__.TTF" id="2_uxy71"]
 [ext_resource type="Script" path="res://scripts/animation_component.gd" id="4_55rvp"]
@@ -92,9 +92,8 @@ text = "Start Game"
 
 [node name="AnimationComponent" type="Node" parent="VBoxContainer/PlayButton"]
 script = ExtResource("4_55rvp")
+tranistion_type = 9
 hover_time = 0.5
-hover_transition = 10
-hover_easing = 2
 hover_scale = Vector2(1.1, 1.1)
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
@@ -113,9 +112,8 @@ text = "Options"
 
 [node name="AnimationComponent2" type="Node" parent="VBoxContainer/SettingsButton"]
 script = ExtResource("4_55rvp")
+tranistion_type = 9
 hover_time = 0.5
-hover_transition = 10
-hover_easing = 2
 hover_scale = Vector2(1.1, 1.1)
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
@@ -135,9 +133,8 @@ text = "Exit
 
 [node name="AnimationComponent3" type="Node" parent="VBoxContainer/ExitButton"]
 script = ExtResource("4_55rvp")
+tranistion_type = 9
 hover_time = 0.5
-hover_transition = 10
-hover_easing = 2
 hover_scale = Vector2(1.1, 1.1)
 
 [node name="Label" type="Label" parent="."]
