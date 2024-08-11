@@ -17,3 +17,5 @@ res://scripts/DemoUI.gd
 res://scripts/Player.gd
 res://scenes/actionable.gd
 res://scenes/actionable.tscn
+res://scripts/animation_component.gd
+res://scenes/Label.gd
