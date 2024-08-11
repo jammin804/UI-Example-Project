@@ -7,3 +7,6 @@ res://demo.tscn
 res://Player.gd
 res://scripts/main_menu.gd
 res://BGM.tscn
+res://text_box.tscn
+res://text_box.gd
+res://scripts/singletons/DialogManager.gd
