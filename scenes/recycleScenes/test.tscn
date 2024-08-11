@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://bk45pic8t5k00"]
 
-[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/images/back.png" id="1_bf6am"]
-[ext_resource type="Script" path="res://scripts/DemoUI.gd" id="1_jl1ya"]
-[ext_resource type="Texture2D" uid="uid://57bfy1qnlxxf" path="res://icon.svg" id="2_rymgr"]
-[ext_resource type="Theme" uid="uid://b01tvmt38yrca" path="res://our_theme.tres" id="2_vunnu"]
-[ext_resource type="Texture2D" uid="uid://od8la3hg04qi" path="res://assets/images/shrooms.png" id="3_g6xfi"]
-[ext_resource type="Texture2D" uid="uid://dqah6sh2naauy" path="res://assets/images/door.png" id="4_sl0ts"]
-[ext_resource type="PackedScene" uid="uid://b8rglonh3qg3k" path="res://assets/healthbar/healthbar.tscn" id="6_qnma4"]
+[ext_resource type="Script" path="res://scripts/DemoUI.gd" id="1_2q738"]
+[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/images/back.png" id="2_7krg1"]
+[ext_resource type="Theme" uid="uid://b01tvmt38yrca" path="res://our_theme.tres" id="3_adm3m"]
+[ext_resource type="Texture2D" uid="uid://57bfy1qnlxxf" path="res://icon.svg" id="4_cbmbc"]
+[ext_resource type="Texture2D" uid="uid://od8la3hg04qi" path="res://assets/images/shrooms.png" id="5_avy4x"]
+[ext_resource type="Texture2D" uid="uid://dqah6sh2naauy" path="res://assets/images/door.png" id="6_v1b2q"]
+[ext_resource type="PackedScene" uid="uid://b8rglonh3qg3k" path="res://assets/healthbar/healthbar.tscn" id="7_q7qhu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enbfj"]
-texture = ExtResource("1_bf6am")
+texture = ExtResource("2_7krg1")
 
 [sub_resource type="Theme" id="Theme_vl71i"]
 
@@ -22,7 +22,7 @@ bg_color = Color(0.183408, 0.551768, 0.380684, 1)
 [node name="Node" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_jl1ya")
+script = ExtResource("1_2q738")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -45,7 +45,7 @@ offset_top = 14.0
 offset_right = -12.0
 offset_bottom = 119.0
 grow_horizontal = 0
-theme = ExtResource("2_vunnu")
+theme = ExtResource("3_adm3m")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/UIPanelContainer"]
 layout_mode = 2
@@ -60,7 +60,7 @@ columns = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("2_rymgr")
+texture = ExtResource("4_cbmbc")
 expand_mode = 2
 
 [node name="Label" type="Label" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
@@ -69,7 +69,7 @@ text = "100"
 
 [node name="TextureRect2" type="TextureRect" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("3_g6xfi")
+texture = ExtResource("5_avy4x")
 stretch_mode = 5
 
 [node name="Label3" type="Label" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
@@ -78,7 +78,7 @@ text = "100"
 
 [node name="TextureRect3" type="TextureRect" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("4_sl0ts")
+texture = ExtResource("6_v1b2q")
 stretch_mode = 5
 
 [node name="Label2" type="Label" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
@@ -123,7 +123,7 @@ text = "Cancel"
 [node name="CanvasLayer" type="CanvasLayer" parent="Panel"]
 follow_viewport_enabled = true
 
-[node name="Healthbar" parent="Panel" instance=ExtResource("6_qnma4")]
+[node name="Healthbar" parent="Panel" instance=ExtResource("7_q7qhu")]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 34.0

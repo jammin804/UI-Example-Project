@@ -1,3 +1,4 @@
+Area2D
 Timer
 Label
 MarginContainer
@@ -12,4 +13,3 @@ CharacterBody2D
 Node2D
 Panel
 Control
-PanelContainer

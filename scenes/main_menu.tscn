@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://cik6vim43x3bl"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_6ja73"]
-[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/images/back.png" id="1_aepxd"]
-[ext_resource type="FontFile" uid="uid://b2p1rfua5fx68" path="res://assets/font/04B_30__.TTF" id="2_uxy71"]
-[ext_resource type="Script" path="res://scripts/animation_component.gd" id="4_55rvp"]
-[ext_resource type="AudioStream" uid="uid://cmiuqqeyqy1ov" path="res://assets/audio/music/A. Cooper - Ninth Track.mp3" id="5_hc6ba"]
-[ext_resource type="AudioStream" uid="uid://chnvd00oell1n" path="res://assets/audio/sfx/uinav.wav" id="6_c1x2k"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_6ykom"]
+[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/images/back.png" id="2_yfmd4"]
+[ext_resource type="Script" path="res://scripts/animation_component.gd" id="3_a0baa"]
+[ext_resource type="FontFile" uid="uid://b2p1rfua5fx68" path="res://assets/font/04B_30__.TTF" id="4_eydyh"]
+[ext_resource type="AudioStream" uid="uid://cmiuqqeyqy1ov" path="res://assets/audio/music/A. Cooper - Ninth Track.mp3" id="5_vc2fo"]
+[ext_resource type="AudioStream" uid="uid://chnvd00oell1n" path="res://assets/audio/sfx/uinav.wav" id="6_vlc3o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kvfue"]
-texture = ExtResource("1_aepxd")
+texture = ExtResource("2_yfmd4")
 modulate_color = Color(0.775063, 0.775063, 0.775063, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmqs2"]
@@ -50,7 +50,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6ja73")
+script = ExtResource("1_6ykom")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -91,7 +91,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_kitij")
 text = "Start Game"
 
 [node name="AnimationComponent" type="Node" parent="VBoxContainer/PlayButton"]
-script = ExtResource("4_55rvp")
+script = ExtResource("3_a0baa")
 tranistion_type = 9
 hover_time = 0.5
 hover_scale = Vector2(1.1, 1.1)
@@ -111,7 +111,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_kitij")
 text = "Options"
 
 [node name="AnimationComponent2" type="Node" parent="VBoxContainer/SettingsButton"]
-script = ExtResource("4_55rvp")
+script = ExtResource("3_a0baa")
 tranistion_type = 9
 hover_time = 0.5
 hover_scale = Vector2(1.1, 1.1)
@@ -132,7 +132,7 @@ text = "Exit
 "
 
 [node name="AnimationComponent3" type="Node" parent="VBoxContainer/ExitButton"]
-script = ExtResource("4_55rvp")
+script = ExtResource("3_a0baa")
 tranistion_type = 9
 hover_time = 0.5
 hover_scale = Vector2(1.1, 1.1)
@@ -153,7 +153,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
-theme_override_fonts/font = ExtResource("2_uxy71")
+theme_override_fonts/font = ExtResource("4_eydyh")
 theme_override_font_sizes/font_size = 60
 text = "Godot UI Test
 "
@@ -161,15 +161,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_hc6ba")
+stream = ExtResource("5_vc2fo")
 volume_db = -10.0
 bus = &"Music"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_c1x2k")
+stream = ExtResource("6_vlc3o")
 bus = &"SFX"
 
-[connection signal="mouse_entered" from="VBoxContainer/PlayButton" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton/AnimationComponent" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_pressed"]

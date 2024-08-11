@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b03ix3316bjwa"]
-
-[ext_resource type="AudioStream" uid="uid://cmiuqqeyqy1ov" path="res://assets/audio/music/A. Cooper - Ninth Track.mp3" id="1_a1jra"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_a1jra")
-autoplay = true

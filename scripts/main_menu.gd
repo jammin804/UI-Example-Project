@@ -5,13 +5,8 @@ func _ready():
 	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass
-
-
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://demo.tscn")
+	get_tree().change_scene_to_file("res://scenes/demo.tscn")
 
 
 func _on_settings_pressed():
@@ -24,3 +19,6 @@ func _on_exit_pressed():
 func _set_health(value):
 	_set_health(value)
 	
+
+func _on_play_button_mouse_entered():
+	pass # Replace with function body.
