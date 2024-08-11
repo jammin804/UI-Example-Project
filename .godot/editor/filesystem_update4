@@ -1,6 +1,9 @@
-res://our_theme.tres
-res://main_menu.tscn
 res://test.tscn
-res://main_menu.gd
-res://scripts/animation_component.gd
-res://default_bus_layout.tres
+res://our_theme.tres
+res://scripts/DemoUI.gd
+res://main_menu.tscn
+res://assets/healthbar/healthbar.tscn
+res://demo.tscn
+res://Player.gd
+res://scripts/main_menu.gd
+res://BGM.tscn

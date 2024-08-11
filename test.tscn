@@ -1,109 +1,156 @@
-[gd_scene load_steps=7 format=3 uid="uid://bk45pic8t5k00"]
+[gd_scene load_steps=12 format=3 uid="uid://bk45pic8t5k00"]
 
-[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/back.png" id="1_bf6am"]
+[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/images/back.png" id="1_bf6am"]
+[ext_resource type="Script" path="res://scripts/DemoUI.gd" id="1_jl1ya"]
 [ext_resource type="Texture2D" uid="uid://57bfy1qnlxxf" path="res://icon.svg" id="2_rymgr"]
 [ext_resource type="Theme" uid="uid://b01tvmt38yrca" path="res://our_theme.tres" id="2_vunnu"]
-[ext_resource type="Texture2D" uid="uid://od8la3hg04qi" path="res://assets/shrooms.png" id="3_g6xfi"]
-[ext_resource type="Texture2D" uid="uid://dqah6sh2naauy" path="res://assets/door.png" id="4_sl0ts"]
+[ext_resource type="Texture2D" uid="uid://od8la3hg04qi" path="res://assets/images/shrooms.png" id="3_g6xfi"]
+[ext_resource type="Texture2D" uid="uid://dqah6sh2naauy" path="res://assets/images/door.png" id="4_sl0ts"]
+[ext_resource type="PackedScene" uid="uid://b8rglonh3qg3k" path="res://assets/healthbar/healthbar.tscn" id="6_qnma4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enbfj"]
 texture = ExtResource("1_bf6am")
 
-[node name="Node" type="Node"]
+[sub_resource type="Theme" id="Theme_vl71i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad6ks"]
+bg_color = Color(0.809751, 0.22676, 0.332667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epytv"]
+bg_color = Color(0.183408, 0.551768, 0.380684, 1)
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jl1ya")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_enbfj")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="UIPanelContainer" type="PanelContainer" parent="Panel"]
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -81.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = 113.0
+offset_left = -85.0
+offset_top = 14.0
+offset_right = -12.0
+offset_bottom = 119.0
 grow_horizontal = 0
 theme = ExtResource("2_vunnu")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/UIPanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 5
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="Panel/UIPanelContainer/MarginContainer"]
 layout_mode = 2
 columns = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("2_rymgr")
 expand_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Label" type="Label" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "100"
 
-[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="TextureRect2" type="TextureRect" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_g6xfi")
 stretch_mode = 5
 
-[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Label3" type="Label" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "100"
 
-[node name="TextureRect3" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="TextureRect3" type="TextureRect" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("4_sl0ts")
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+[node name="Label2" type="Label" parent="Panel/UIPanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "100"
 
-[node name="PanelContainer2" type="PanelContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
+[node name="MessagePanel" type="PanelContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -203.0
+offset_left = 312.0
 offset_top = -173.0
-offset_right = 203.0
+offset_right = 718.0
 offset_bottom = 173.0
-grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"BigPanelContainer"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MessagePanel"]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="PanelContainer2/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MessagePanel/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"HeaderLarge"
 text = "Mission"
 horizontal_alignment = 1
 
-[node name="Text" type="Label" parent="PanelContainer2/VBoxContainer"]
+[node name="Text" type="Label" parent="Panel/MessagePanel/VBoxContainer"]
 layout_mode = 2
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d"
 autowrap_mode = 3
 
-[node name="OkButton" type="Button" parent="PanelContainer2/VBoxContainer"]
+[node name="OkButton" type="Button" parent="Panel/MessagePanel/VBoxContainer"]
 layout_mode = 2
 text = "OK
 "
 
-[node name="CancelButton" type="Button" parent="PanelContainer2/VBoxContainer"]
+[node name="CancelButton" type="Button" parent="Panel/MessagePanel/VBoxContainer"]
 layout_mode = 2
 text = "Cancel"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="Panel"]
 follow_viewport_enabled = true
+
+[node name="Healthbar" parent="Panel" instance=ExtResource("6_qnma4")]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 34.0
+offset_right = 457.0
+offset_bottom = 97.0
+
+[node name="DamageBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 112.0
+offset_right = 163.0
+offset_bottom = 159.0
+theme = SubResource("Theme_vl71i")
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxFlat_ad6ks")
+text = "Damage"
+
+[node name="HealBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 112.0
+offset_right = 307.0
+offset_bottom = 159.0
+theme = SubResource("Theme_vl71i")
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxFlat_epytv")
+text = "Heal"
+
+[connection signal="pressed" from="Panel/DamageBtn" to="." method="_on_damage_btn_pressed"]
+[connection signal="pressed" from="Panel/HealBtn" to="." method="_on_heal_btn_pressed"]

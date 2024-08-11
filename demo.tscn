@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://dgj1nrhad4yqy"]
+
+[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/images/back.png" id="1_u8o12"]
+[ext_resource type="Texture2D" uid="uid://57bfy1qnlxxf" path="res://icon.svg" id="2_7hef0"]
+[ext_resource type="Script" path="res://Player.gd" id="3_y1y1q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7oio"]
+texture = ExtResource("1_u8o12")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qi87h"]
+bg_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4tx2"]
+bg_color = Color(0.798321, 0.118214, 0.23092, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37g72"]
+bg_color = Color(0.576906, 0.0803912, 0.256507, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4uv7"]
+
+[node name="Demo" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x7oio")
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(881, 469)
+scale = Vector2(1.90625, 1.88408)
+texture = ExtResource("2_7hef0")
+script = ExtResource("3_y1y1q")
+
+[node name="Healthbar" type="ProgressBar" parent="Player"]
+offset_left = -197.246
+offset_top = -119.0
+offset_right = 210.754
+offset_bottom = -89.0
+theme_override_styles/background = SubResource("StyleBoxFlat_qi87h")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o4tx2")
+max_value = 10.0
+value = 5.0
+
+[node name="AddHealth" type="Button" parent="."]
+offset_left = 385.0
+offset_top = 718.0
+offset_right = 738.0
+offset_bottom = 854.0
+text = "+1 Health"
+
+[node name="SubtractHealth" type="Button" parent="."]
+offset_left = 1007.0
+offset_top = 714.0
+offset_right = 1360.0
+offset_bottom = 850.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_37g72")
+text = "- 1 Health"
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 992.0
+offset_right = 175.0
+offset_bottom = 1057.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_o4uv7")
+text = "Back"
+
+[connection signal="pressed" from="AddHealth" to="Player" method="_on_add_health_pressed"]
+[connection signal="pressed" from="SubtractHealth" to="Player" method="_on_subtract_health_pressed"]
+[connection signal="pressed" from="BackButton" to="Player" method="_on_back_button_pressed"]

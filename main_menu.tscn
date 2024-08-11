@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cik6vim43x3bl"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_6ja73"]
-[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/back.png" id="1_aepxd"]
+[ext_resource type="Texture2D" uid="uid://bnpmx8lif7i1g" path="res://assets/images/back.png" id="1_aepxd"]
 [ext_resource type="FontFile" uid="uid://b2p1rfua5fx68" path="res://assets/font/04B_30__.TTF" id="2_uxy71"]
 [ext_resource type="Script" path="res://scripts/animation_component.gd" id="4_55rvp"]
 [ext_resource type="AudioStream" uid="uid://cmiuqqeyqy1ov" path="res://assets/audio/music/A. Cooper - Ninth Track.mp3" id="5_hc6ba"]
@@ -163,7 +163,6 @@ vertical_alignment = 1
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_hc6ba")
 volume_db = -10.0
-autoplay = true
 bus = &"Music"
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
